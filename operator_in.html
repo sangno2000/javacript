@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>operator in pada javascript</title>
+</head>
+<body>
+
+	<script>
+			// In operator
+		// ==in Opertaor adalah operator yang bisa dilakukan untuk mengecek apakah sebuah property ada di dalam object atau tidak
+		// ==jika property tersebut ada di object , maka hasil nya true, jika tidak maka hasil nya adalah false
+		// ==tidak hanya di object, in operator juga bisa di gunakan untuk mengecek index di array.
+//Contoh:
+		let nama  = {
+			namaDepan: "hadi",
+			lastName : "sucipto"
+		}
+		if ("namaDepan" in nama) { //jika firstname ada di nama
+			console.log(`hello ${nama.namaDepan}`)
+		}else {
+			console.log("property tidak ada")
+		}
+
+		// attention:
+		// ==in operator hanya akan mengecek apakah sebuah property ada atau tidak
+		// ==jadi walaupun nilai property null atau undefined ,maka tetap akan dianggap ada
+
+		
+	</script>
+</body>
+</html>
