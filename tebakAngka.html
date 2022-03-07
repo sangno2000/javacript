@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Latihan 2 javacript</title>
+    <style>
+       body {
+            background-color: rgb(41, 54, 50);
+            color: rgb(124, 223, 124);
+        }
+    </style>
+</head>
+<body>
+    <script>
+       let again = true;;
+while(again) {
+    confirm(`Permainan game tebak angka sederhana\n Di Buat Oleh Hadi`);
+    let random = Math.floor(Math.random()*10); //GET DATA NUMBER RANDOM 1 - 10
+    console.log(random)
+    let player=prompt(`Masukkan angka tebakanmu 1 - 10\nBila tebakan kamu benar kamu mendapatka kulkas hehe`); //GET DATA INPUT FROM PLAYER
+    for(let chance = 3 -1; chance >= 1; chance--){ 
+        if(player == random){
+            alert("HEBAT!! Tebakan kamu benar\nTelpon toko elektronik untuk claim hadiah");
+            break;
+        };
+        if(player < random ){
+            alert("tebakan kamu salah");again
+            player = prompt(`Angka yang kamu masukkan terlalu rendah, kamu masih memiliki ${chance} kesempatan`);
+        }else if (player > random && player < 10){
+            alert("tebakan kamu salah");
+            player = prompt(`Angka yang kamu masukkan terlalu tinggi,kamu masih memiliki ${chance} kesempatan`);
+        }else {
+            alert("Tebakan yang kamu masukkan tidak di ketahui");
+            break;
+        };
+        if(chance == 1 && player == random){
+            alert("HEBAT!! Tebakan kamu benar\NTelpon toko elektronik untuk claim hadiah");
+            break;
+        };
+        if (chance == 1){
+            alert("Tebakan kamu salah,dan kesempatan kamu sudah habis")
+            break;
+        };
+    }
+    again = confirm("Masih mau main lagi?");  
+}
+alert("Terimakasih sudah bermain");
+
+
+
+
+
+    </script>
+</body>
+</html>
